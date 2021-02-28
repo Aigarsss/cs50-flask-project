@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block title %}
+Sun status
+{% endblock %}
+{% block content %}
+
+
+<form action="/weather" method="POST" class="list-group">
+    <div class="row">
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Location" name="location">
+        </div>
+        <div class="col">
+            <input type="date" class="form-control" placeholder="Last name" name="date">
+        </div>
+        <div class="col">
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Go</button>
+        </div>
+    </div>
+</form>
+<br>
+<div class="list-group">
+    <a class="list-group-item list-group-item-action active">{{ displayName }} on {{ date }}</a>
+    <a class="list-group-item list-group-item-action">Sunrise: <strong>{{ sunData['sunrise'] }}</strong></a>
+    <a class="list-group-item list-group-item-action">Sunset: <strong>{{ sunData['sunset'] }}</strong></a>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+{% block title %}
+Add session
+{% endblock %}
+
+{% block content %}
+
+<form action="/addsession" method="POST" class="form-prompts">   
+        <!-- Text input-->
+        
+        <div class="form-row">
+          <div class="col">
+            <input  name="name" placeholder="Name" class="form-control"  type="text">
+          </div>
+          <div class="col">
+            <input name="number" placeholder="Phone" class="form-control"  type="tel">
+          </div>
+        </div>
+        
+        
+        <div class="form-row"> 
+            <div class="col">
+                <select name="category" class="form-control selectpicker">
+                <option value="wedding">Wedding</option>
+                <option value="portrait">Portrait</option>
+                <option value="couples">Couples</option>
+                <option value="family">Family</option>
+                <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="col">
+                <input name="date" class="form-control" type="date">
+            </div>
+        </div>
+
+        
+        <div class="form-row">
+            <div class="col">
+                <input name="location" placeholder="Location" class="form-control" type="text">
+            </div>
+
+            <div class="col">
+                <input name="email" placeholder="Email" class="form-control" type="email">
+            </div>
+        </div>
+    
+        
+            <div class="form-row">
+            <div class="col-md">
+                <textarea class="form-control" rows="3" name="comment" placeholder="Comment"></textarea>
+            </div>
+        </div>
+        
+        <!-- Select Basic -->
+        
+
+        <!-- Button -->
+        <div class="form-group">
+          <label class="col-md control-label"></label>
+          <div class="col-md"><br>
+            <button type="submit" class="btn btn-primary">SUBMIT</button>
+          </div>
+        </div>
+    
+    </form>
+
+
+
+{% endblock %}

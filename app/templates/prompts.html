@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block title %}
+Prompts
+{% endblock %}
+{% block content %}
+<div class="row">
+    <div class="col-lg-6 mx-auto">
+
+        <!-- CUSTOM BLOCKQUOTE -->
+        <blockquote class="blockquote blockquote-custom bg-white p-5 shadow rounded">
+            <div class="blockquote-custom-icon bg-info shadow-sm"><i class="fa fa-quote-left text-white"></i></div>
+            <p class="mb-0 mt-2 font-italic">{{ prompt }}</p>
+            <footer class="blockquote-footer pt-4 mt-4 border-top"> {{ category }}</footer>
+        </blockquote><!-- END -->
+
+        <form method ="post" action="/prompts">
+            <button class="btn btn-primary" type="submit" name="randomQuote" value="randomQuote"> Random quote </button>
+        </form>
+
+    </div>
+</div>
+{% endblock %}

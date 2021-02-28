@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+{% block title %}
+Upcoming sessions
+{% endblock %}
+{% block content %}
+
+    <div class="table-responsive">
+        <table class="table">
+            <caption>Booked sessions</caption>
+            <thead>
+              <tr>
+                <th scope="col">Date</th>
+                <th scope="col">Name</th>
+                <th scope="col">Location</th>
+                <th scope="col">Category</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Email</th>
+                <th scope="col">Comment</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for item in data %}
+              <tr>
+                <th>{{ item['date'] }} </th>
+                <td>{{ item['name'] }}</td>
+                <td>{{ item['location'] }}</td>
+                <td>{{ item['category'] }}</td>
+                <td>{{ item['phone'] }}</td>
+                <td>{{ item['email'] }}</td>
+                <td>{{ item['comment'] }}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+      </div>
+
+    <!-- for sorting -->
+    <!-- https://datatables.net/manual/installation -->
+
+{% endblock %}

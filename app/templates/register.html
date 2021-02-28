@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+      
+        <title>{% block title %} Register {% endblock %}</title>
+      
+        <!-- Bootstrap core CSS -->
+        <link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+      
+        <!-- Custom styles for this template -->
+        <link href="{{ url_for('static', filename='css/simple-sidebar.css') }}" rel="stylesheet">
+      
+      </head>
+
+<body class="text-center">
+    <form class="form-signin" action="/register" method="post">
+      <a href="{{ url_for('register') }}"><img class="mb-4" src="{{ url_for('static', filename='img/diaphragm.svg') }}" alt="" width="72" height="72"></a>
+      <h1 class="h3 mb-3 font-weight-normal">Registration form</h1>
+
+        {% if get_flashed_messages() %}
+            <div class="alert alert-primary border text-center" role="alert">
+                {{ get_flashed_messages() | join(" ") }}
+            </div>
+        {% endif %}
+
+      <label for="inputEmail" class="sr-only">Email address</label>
+      <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="" autocomplete="off" name="email">
+      <label for="inputPassword" class="sr-only">Password</label>
+      <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="" autocomplete="off" name="password">
+      <label for="inputPassword" class="sr-only">Repeat Password</label>
+      <input type="password" id="inputPassword" class="form-control" placeholder="Password again" required="" autocomplete="off" name="passwordrepeat">
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+      <a href="{{ url_for('login') }}" class="sign-in">Log in</a>
+      <p class="mt-5 mb-3 text-muted">CS50 2020</p>
+    </form>
+</body>
+</html>

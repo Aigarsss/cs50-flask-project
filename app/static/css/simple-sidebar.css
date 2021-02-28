@@ -1,0 +1,128 @@
+/*!
+ * Start Bootstrap - Simple Sidebar (https://startbootstrap.com/template/simple-sidebar)
+ * Copyright 2013-2020 Start Bootstrap
+ * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-simple-sidebar/blob/master/LICENSE)
+ */
+
+ #wrapper {
+    overflow-x: hidden;
+ }
+
+#sidebar-wrapper {
+  min-height: 100vh;
+  margin-left: -15rem;
+  -webkit-transition: margin .25s ease-out;
+  -moz-transition: margin .25s ease-out;
+  -o-transition: margin .25s ease-out;
+  transition: margin .25s ease-out;
+}
+
+#sidebar-wrapper .sidebar-heading {
+  padding: 0.875rem 1.25rem;
+  font-size: 1.2rem;
+}
+
+#sidebar-wrapper .list-group {
+  width: 15rem;
+}
+
+#page-content-wrapper {
+  min-width: 100vw;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: 0;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: 100px auto;
+}
+
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.sign-in {
+  margin-top: 10px;
+  text-decoration: none;
+  display: block;
+}
+
+.container-fluid {
+  padding-left: 25px;
+}
+
+.form-row {
+  padding: 5px;
+}
+
+.blockquote-custom {
+  position: relative;
+  font-size: 1.1rem;
+  margin-top: 50px;
+}
+
+.blockquote-custom-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -25px;
+  left: 50px;
+}
+
+.alert {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 0.7rem;
+}
+
+.form-prompts {
+  width: 100%;
+  max-width: 700px;
+  padding: 15px;
+  margin: 25px auto;
+}
+
+.list-group {
+  width: 50%;
+}
+
+@media (min-width: 768px) {
+  #sidebar-wrapper {
+    margin-left: 0;
+  }
+
+  #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: -15rem;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .list-group {
+    width: 90%;
+  }
+
+  .col {
+    margin-top: 10px;
+  }
+}
